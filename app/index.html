@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Weather App</h1>
+            <form id="location-form">
+                <input type="text" id="location-input" placeholder="Enter city name..." required>
+                <button type="submit">Get Weather</button>
+            </form>
+        </header>
+        <main class="weather-display">
+            <div id="weather-info" class="hidden">
+                <h2 id="city-name">City</h2>
+                <p id="temperature">Temperature: -- &#8451;</p>
+                <p id="description">Condition: --</p>
+                <p id="humidity">Humidity: --%</p>
+                <p id="wind">Wind Speed: -- m/s</p>
+            </div>
+            <div id="error-message" class="hidden"></div>
+        </main>
+    </div>
+    <script src="script.js">
+        const apiKey="ba558d920d12bb08600ca934a5c5c915";
+        const apiUrl="https://api.openweathermap.org/data/2.5/weather?q=Shelburne&appid=&units=imperial";
+    </script>
+</body>
+</html>
